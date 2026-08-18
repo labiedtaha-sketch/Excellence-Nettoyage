@@ -1,0 +1,6 @@
+{
+  "name": "Excellence Nettoyage",
+  "description": "Site web professionnel complet pour Excellence Nettoyage, entreprise de nettoyage et ménage haut de gamme pour particuliers, professionnels, industrie agroalimentaire et interventions extrêmes en Île-de-France.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
