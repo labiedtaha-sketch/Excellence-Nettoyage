@@ -86,8 +86,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuoteModal }) => {
           >
             <picture>
               <source srcSet="/assets/excellence-nettoyage-logo-header.webp" type="image/webp" />
-              <source srcSet="/assets/excellence-nettoyage-logo-transparent this one.webp" type="image/webp" />
-              <source srcSet="/assets/.aistudio/excellence-nettoyage-logo-transparent this one.webp" type="image/webp" />
               <img 
                 src="/assets/excellence-nettoyage-logo-header.webp" 
                 alt="Excellence Nettoyage Logo" 
