@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, MessageCircle, ArrowUp } from 'lucide-react';
+import whatsappLogo from '../assets/whatsapp-logo.webp';
 
 export const FloatingActions: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -39,7 +40,7 @@ export const FloatingActions: React.FC = () => {
       >
         <div className="relative flex items-center justify-center">
           <img 
-            src="/assets/whatsapp-logo.webp" 
+            src={whatsappLogo} 
             alt="WhatsApp" 
             className="w-6 h-6 object-contain"
             referrerPolicy="no-referrer"

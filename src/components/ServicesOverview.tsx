@@ -13,6 +13,7 @@ import {
   Phone
 } from 'lucide-react';
 import { ServiceCategory } from '../types';
+import whatsappLogo from '../assets/whatsapp-logo.webp';
 
 interface ServicesOverviewProps {
   onOpenQuoteModal: (category?: ServiceCategory, serviceId?: string) => void;
@@ -307,7 +308,7 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({ onOpenQuoteM
               className="bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-extrabold px-5 py-3 rounded-xl transition-all shadow-sm flex items-center gap-2"
             >
               <img 
-                src="/assets/whatsapp-logo.webp" 
+                src={whatsappLogo} 
                 alt="WhatsApp" 
                 className="w-4 h-4 object-contain shrink-0" 
                 referrerPolicy="no-referrer"

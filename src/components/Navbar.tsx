@@ -8,6 +8,8 @@ import {
   Percent,
   MessageCircle
 } from 'lucide-react';
+import headerLogo from '../assets/excellence-nettoyage-logo-header.webp';
+import whatsappLogo from '../assets/whatsapp-logo.webp';
 
 interface NavbarProps {
   onOpenQuoteModal: (category?: string, serviceId?: string) => void;
@@ -55,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuoteModal }) => {
               className="hidden sm:inline-flex items-center gap-1.5 font-bold text-xs hover:text-white transition-colors"
             >
               <img 
-                src="/assets/whatsapp-logo.webp" 
+                src={whatsappLogo} 
                 alt="WhatsApp" 
                 className="w-3.5 h-3.5 object-contain shrink-0" 
                 referrerPolicy="no-referrer"
@@ -84,15 +86,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuoteModal }) => {
             onClick={() => scrollToSection('accueil')} 
             className="flex items-center gap-3 text-left cursor-pointer p-1 -ml-1 rounded-2xl hover:opacity-90 transition-all"
           >
-            <picture>
-              <source srcSet="/assets/excellence-nettoyage-logo-header.webp" type="image/webp" />
-              <img 
-                src="/assets/excellence-nettoyage-logo-header.webp" 
-                alt="Excellence Nettoyage Logo" 
-                className="h-11 sm:h-12 w-auto max-w-[220px] sm:max-w-[260px] object-contain drop-shadow-md"
-                referrerPolicy="no-referrer"
-              />
-            </picture>
+            <img 
+              src={headerLogo} 
+              alt="Excellence Nettoyage Logo" 
+              className="h-11 sm:h-12 w-auto max-w-[220px] sm:max-w-[260px] object-contain drop-shadow-md"
+              referrerPolicy="no-referrer"
+            />
           </button>
 
           {/* Nav Links */}

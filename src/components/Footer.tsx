@@ -8,6 +8,11 @@ import {
   FileText
 } from 'lucide-react';
 import { ServiceCategory } from '../types';
+import logoTransparent from '../assets/excellence-nettoyage-logo-transparent.webp';
+import whatsappLogo from '../assets/whatsapp-logo.webp';
+import instagramLogo from '../assets/instagram-logo.webp';
+import tiktokLogo from '../assets/tiktok-logo.webp';
+import facebookLogo from '../assets/facebook-logo.webp';
 
 interface FooterProps {
   onOpenQuoteModal: (category?: ServiceCategory) => void;
@@ -38,7 +43,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
               className="flex items-center gap-2.5 text-left group cursor-pointer"
             >
               <img 
-                src="/assets/excellence-nettoyage-logo-transparent.webp" 
+                src={logoTransparent} 
                 alt="Excellence Nettoyage" 
                 className="h-10 sm:h-11 w-auto max-w-[200px] object-contain"
                 referrerPolicy="no-referrer"
@@ -65,7 +70,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
                 className="flex items-center gap-2 text-slate-800 hover:text-emerald-700 transition-colors group"
               >
                 <img 
-                  src="/assets/whatsapp-logo.webp" 
+                  src={whatsappLogo} 
                   alt="WhatsApp" 
                   className="w-4 h-4 object-contain shrink-0 group-hover:scale-110 transition-transform" 
                   referrerPolicy="no-referrer"
@@ -105,7 +110,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
                   className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center justify-center p-1.5 transition-all hover:scale-110 active:scale-95 shadow-xs"
                 >
                   <img
-                    src="/assets/instagram-logo.webp"
+                    src={instagramLogo}
                     alt="Instagram Excellence Nettoyage"
                     className="w-full h-full object-contain"
                     referrerPolicy="no-referrer"
@@ -121,7 +126,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
                   className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center justify-center p-1.5 transition-all hover:scale-110 active:scale-95 shadow-xs"
                 >
                   <img
-                    src="/assets/tiktok-logo.webp"
+                    src={tiktokLogo}
                     alt="TikTok Excellence Nettoyage"
                     className="w-full h-full object-contain"
                     referrerPolicy="no-referrer"
@@ -137,7 +142,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
                   className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center justify-center p-1.5 transition-all hover:scale-110 active:scale-95 shadow-xs"
                 >
                   <img
-                    src="/assets/facebook-logo.webp"
+                    src={facebookLogo}
                     alt="Facebook Excellence Nettoyage"
                     className="w-full h-full object-contain"
                     referrerPolicy="no-referrer"
@@ -153,7 +158,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
                   className="w-9 h-9 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 flex items-center justify-center p-1.5 transition-all hover:scale-110 active:scale-95 shadow-xs"
                 >
                   <img
-                    src="/assets/whatsapp-logo.webp"
+                    src={whatsappLogo}
                     alt="WhatsApp Excellence Nettoyage"
                     className="w-full h-full object-contain"
                     referrerPolicy="no-referrer"
