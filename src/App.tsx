@@ -37,12 +37,10 @@ export default function App() {
       {/* 1. TOP FULL-SCREEN WRAPPER : L'IMAGE COMMENCE DU TOUT HAUT DU SITE (MENU + HERO) */}
       <div className="relative bg-slate-950 text-white overflow-hidden min-h-[92vh] flex flex-col">
         
-        {/* Full-bleed background image : 'agent-de-nettoyage-debout-donnant-son-dos-à-la-cam.webp' */}
+        {/* Full-bleed background image : 'agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp' */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <picture>
             <source srcSet="/assets/agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp" type="image/webp" />
-            <source srcSet="/assets/agent-de-nettoyage-debout-donnant-son-dos-à-la-cam.webp" type="image/webp" />
-            <source srcSet="/assets/.aistudio/agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp" type="image/webp" />
             <img
               src="/assets/agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp"
               alt="Excellence Nettoyage - Agent Professionnel Île-de-France"
