@@ -34,11 +34,16 @@ export const FloatingActions: React.FC = () => {
         href="https://wa.me/33640860213?text=Bonjour%20Excellence%20Nettoyage,%20je%20souhaite%20un%20devis%20de%20nettoyage"
         target="_blank"
         rel="noopener noreferrer"
-        className="pointer-events-auto flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white p-3.5 sm:px-4 sm:py-3 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer group border-2 border-white/80"
+        className="pointer-events-auto flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white p-3 sm:px-4 sm:py-2.5 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer group border-2 border-white/90"
         aria-label="Discuter sur WhatsApp"
       >
         <div className="relative flex items-center justify-center">
-          <MessageCircle className="w-6 h-6 fill-white text-[#25D366]" />
+          <img 
+            src="/assets/whatsapp-logo.webp" 
+            alt="WhatsApp" 
+            className="w-6 h-6 object-contain"
+            referrerPolicy="no-referrer"
+          />
           <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-white rounded-full animate-ping"></span>
           <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-100 rounded-full"></span>
         </div>

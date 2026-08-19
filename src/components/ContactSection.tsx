@@ -137,8 +137,13 @@ export const ContactSection: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200/80 hover:border-[#25D366] transition-all cursor-pointer group shadow-xs hover:shadow-md"
                 >
-                  <div className="p-3 rounded-xl bg-[#25D366]/20 text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-colors">
-                    <MessageCircle className="w-5 h-5 fill-current" />
+                  <div className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-100 group-hover:bg-[#25D366]/20 transition-colors flex items-center justify-center">
+                    <img 
+                      src="/assets/whatsapp-logo.webp" 
+                      alt="WhatsApp" 
+                      className="w-6 h-6 object-contain" 
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
                   <div>
                     <div className="text-xs text-slate-500 font-bold uppercase tracking-wider">WhatsApp 7j/7</div>

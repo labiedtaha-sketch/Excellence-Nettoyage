@@ -3,11 +3,13 @@ import {
   Sparkles, 
   Phone, 
   ArrowRight, 
-  Percent,
-  FileText,
-  Clock,
-  ShieldCheck,
-  CheckCircle2
+  Percent, 
+  FileText, 
+  Clock, 
+  ShieldCheck, 
+  CheckCircle2,
+  Award,
+  Zap
 } from 'lucide-react';
 import { ServiceCategory } from '../types';
 
@@ -17,87 +19,142 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
   return (
-    <section id="accueil" className="relative bg-white pt-16 pb-16 sm:pt-24 sm:pb-24 border-b border-slate-100 overflow-hidden text-center">
-      
-      {/* Subtle Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-radial from-[#5faedb]/10 via-transparent to-transparent pointer-events-none"></div>
-
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 space-y-8">
+    <section id="accueil" className="w-full text-white text-left py-12 sm:py-16 lg:py-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 w-full">
         
-        {/* Top Badges */}
-        <div className="flex flex-wrap items-center justify-center gap-2.5">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-black bg-[#5faedb]/15 text-[#155a82] border border-[#5faedb]/30 shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-[#155a82]" />
-            <span>Île-de-France • Intervention 7j/7</span>
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-black bg-slate-950 text-white shadow-xs">
-            <Percent className="w-3.5 h-3.5 text-amber-300" />
-            <span>Avance Immédiate -50% Crédit d'Impôt</span>
-          </span>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          {/* Main Text Content */}
+          <div className="lg:col-span-8 space-y-6 sm:space-y-8 text-center lg:text-left">
+            
+            {/* Top Badges */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
+              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-black bg-[#5faedb] text-slate-950 shadow-md">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Île-de-France • Intervention 7j/7</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-black bg-white/15 text-white backdrop-blur-md border border-white/20 shadow-md">
+                <Percent className="w-3.5 h-3.5 text-amber-300" />
+                <span>Avance Immédiate -50% Crédit d'Impôt</span>
+              </span>
+            </div>
 
-        {/* Fast, Powerful Main Headline */}
-        <div className="space-y-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-slate-950 font-display leading-[1.08]">
-            L'Excellence du Nettoyage.
-          </h1>
-          <p className="text-lg sm:text-2xl text-slate-600 font-normal max-w-2xl mx-auto">
-            Particuliers & Professionnels. Devis gratuit et personnalisé en moins de 2h.
-          </p>
-        </div>
+            {/* Main Headline */}
+            <div className="space-y-4">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white font-display leading-[1.05] drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
+                L'Excellence du Nettoyage en Île-de-France.
+              </h1>
+              <p className="text-base sm:text-xl text-slate-100 font-medium max-w-2xl mx-auto lg:mx-0 leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+                Particuliers, Copropriétés, Bureaux & Espaces Commerciaux. Une équipe formée, du matériel professionnel de pointe et un résultat irréprochable garanti.
+              </p>
+            </div>
 
-        {/* Fast Action CTA Group - 3 Buttons of identical size, on a single line */}
-        <div className="w-full max-w-4xl mx-auto pt-2">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4 w-full">
-            {/* Button 1: Devis Gratuit */}
-            <button
-              id="hero-quote-cta"
-              onClick={() => onOpenQuoteModal()}
-              className="h-15 sm:h-16 w-full bg-slate-950 hover:bg-[#5faedb] text-white hover:text-slate-950 font-extrabold text-sm sm:text-[15px] px-4 rounded-2xl transition-all cursor-pointer shadow-xl hover:shadow-2xl flex items-center justify-center gap-2 border border-slate-900 hover:border-[#4ea0ce] active:scale-95 whitespace-nowrap group"
-            >
-              <FileText className="w-4 h-4 text-amber-300 group-hover:text-slate-950 shrink-0" />
-              <span>Demander un Devis Gratuit</span>
-              <ArrowRight className="w-4 h-4 shrink-0" />
-            </button>
+            {/* 3 Action Buttons */}
+            <div className="w-full pt-2">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-xl mx-auto lg:mx-0">
+                
+                {/* Button 1: Devis Gratuit */}
+                <button
+                  id="hero-quote-cta"
+                  onClick={() => onOpenQuoteModal()}
+                  className="h-14 sm:h-16 w-full bg-[#5faedb] hover:bg-white text-slate-950 hover:text-slate-950 font-black text-xs sm:text-sm px-4 rounded-2xl transition-all cursor-pointer shadow-2xl hover:shadow-cyan-500/30 flex items-center justify-center gap-2 active:scale-95 whitespace-nowrap group"
+                >
+                  <FileText className="w-4 h-4 text-slate-950 shrink-0" />
+                  <span>Devis Gratuit 2h</span>
+                  <ArrowRight className="w-4 h-4 shrink-0 transition-transform group-hover:translate-x-1" />
+                </button>
 
-            {/* Button 2: WhatsApp Direct */}
-            <a
-              href="https://wa.me/33640860213?text=Bonjour%20Excellence%20Nettoyage,%20je%20souhaite%20un%20devis%20de%20nettoyage"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="h-15 sm:h-16 w-full bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold text-sm sm:text-[15px] px-4 rounded-2xl transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl active:scale-95 cursor-pointer whitespace-nowrap"
-            >
-              <div className="w-2.5 h-2.5 rounded-full bg-white animate-pulse shrink-0"></div>
-              <span>WhatsApp Direct</span>
-            </a>
+                {/* Button 2: WhatsApp Direct */}
+                <a
+                  href="https://wa.me/33640860213?text=Bonjour%20Excellence%20Nettoyage,%20je%20souhaite%20un%20devis%20de%20nettoyage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-14 sm:h-16 w-full bg-[#25D366] hover:bg-[#20ba59] text-white font-black text-xs sm:text-sm px-4 rounded-2xl transition-all flex items-center justify-center gap-2 shadow-xl hover:shadow-emerald-500/30 active:scale-95 cursor-pointer whitespace-nowrap"
+                >
+                  <img 
+                    src="/assets/whatsapp-logo.webp" 
+                    alt="WhatsApp" 
+                    className="w-5 h-5 object-contain shrink-0" 
+                    referrerPolicy="no-referrer"
+                  />
+                  <span>WhatsApp 7j/7</span>
+                </a>
 
-            {/* Button 3: Téléphone */}
-            <a
-              href="tel:+33640860213"
-              className="h-15 sm:h-16 w-full bg-slate-100 hover:bg-slate-200 text-slate-950 font-black text-sm sm:text-[15px] px-4 rounded-2xl border border-slate-200 transition-all flex items-center justify-center gap-2 shadow-xs whitespace-nowrap"
-            >
-              <Phone className="w-4 h-4 text-[#5faedb] shrink-0" />
-              <span>06 40 86 02 13</span>
-            </a>
+                {/* Button 3: Téléphone */}
+                <a
+                  href="tel:+33640860213"
+                  className="h-14 sm:h-16 w-full bg-white/10 hover:bg-white/20 text-white font-black text-xs sm:text-sm px-4 rounded-2xl border border-white/30 backdrop-blur-md shadow-xl transition-all flex items-center justify-center gap-2 whitespace-nowrap active:scale-95"
+                >
+                  <Phone className="w-4 h-4 text-[#5faedb] shrink-0" />
+                  <span>06 40 86 02 13</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Reassurance Checklist */}
+            <div className="pt-4 sm:pt-6 border-t border-white/15">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center sm:text-left">
+                <div className="flex items-center justify-center sm:justify-start gap-2.5 text-xs sm:text-sm font-bold text-slate-200">
+                  <Clock className="w-4 h-4 text-[#5faedb] shrink-0" />
+                  <span>Devis sous 2h sans engagement</span>
+                </div>
+                <div className="flex items-center justify-center sm:justify-start gap-2.5 text-xs sm:text-sm font-bold text-slate-200">
+                  <ShieldCheck className="w-4 h-4 text-[#5faedb] shrink-0" />
+                  <span>Personnel qualifié & assuré</span>
+                </div>
+                <div className="flex items-center justify-center sm:justify-start gap-2.5 text-xs sm:text-sm font-bold text-emerald-400">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Satisfaction Garantie</span>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </div>
 
-        {/* 3 Quick Guarantees (Clean, identical equal spacing on a single line) */}
-        <div className="w-full max-w-4xl mx-auto pt-6 border-t border-slate-100">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center items-center">
-            <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-slate-800 whitespace-nowrap">
-              <Clock className="w-4 h-4 text-[#5faedb] shrink-0" />
-              <span>Devis sous 2h sans engagement</span>
+          {/* Right Floating Badges / Highlights */}
+          <div className="lg:col-span-4 hidden lg:flex flex-col gap-4 items-end">
+            
+            {/* Pill 1 */}
+            <div className="bg-slate-900/80 backdrop-blur-xl border border-white/20 p-4 rounded-3xl shadow-2xl max-w-xs text-left transform translate-y-4 hover:translate-y-2 transition-all">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-[#5faedb] text-slate-950 flex items-center justify-center font-black shrink-0 shadow-md">
+                  <Award className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-black text-white">Protocole d'Hygiène Strict</div>
+                  <div className="text-[11px] font-medium text-slate-300">Normes sanitaires & écologiques</div>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-slate-800 whitespace-nowrap">
-              <ShieldCheck className="w-4 h-4 text-[#5faedb] shrink-0" />
-              <span>Personnel certifié en CDI & vérifié</span>
+
+            {/* Pill 2 */}
+            <div className="bg-slate-900/80 backdrop-blur-xl border border-white/20 p-4 rounded-3xl shadow-2xl max-w-xs text-left transform hover:translate-x-[-4px] transition-all">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-amber-400 text-slate-950 flex items-center justify-center font-black shrink-0 shadow-md">
+                  <Percent className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-black text-white">-50% Déduction Fiscale</div>
+                  <div className="text-[11px] font-medium text-slate-300">Service à la personne en direct</div>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-slate-800 whitespace-nowrap">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>Garantie Satisfait ou Ré-intervenu</span>
+
+            {/* Pill 3 */}
+            <div className="bg-slate-900/80 backdrop-blur-xl border border-white/20 p-4 rounded-3xl shadow-2xl max-w-xs text-left transform -translate-y-2 hover:translate-y-[-6px] transition-all">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-emerald-500 text-white flex items-center justify-center font-black shrink-0 shadow-md">
+                  <Zap className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-black text-white">Intervention Rapide 7j/7</div>
+                  <div className="text-[11px] font-medium text-slate-300">Partout en Île-de-France</div>
+                </div>
+              </div>
             </div>
+
           </div>
+
         </div>
 
       </div>

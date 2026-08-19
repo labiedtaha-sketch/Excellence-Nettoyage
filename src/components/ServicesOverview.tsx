@@ -304,9 +304,15 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({ onOpenQuoteM
               href="https://wa.me/33640860213?text=Bonjour,%20je%20souhaite%20un%20devis%20de%20nettoyage"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-extrabold px-5 py-3 rounded-xl transition-all shadow-sm"
+              className="bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-extrabold px-5 py-3 rounded-xl transition-all shadow-sm flex items-center gap-2"
             >
-              WhatsApp 7j/7
+              <img 
+                src="/assets/whatsapp-logo.webp" 
+                alt="WhatsApp" 
+                className="w-4 h-4 object-contain shrink-0" 
+                referrerPolicy="no-referrer"
+              />
+              <span>WhatsApp 7j/7</span>
             </a>
             <a
               href="tel:+33640860213"

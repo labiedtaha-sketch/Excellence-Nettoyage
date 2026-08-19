@@ -33,22 +33,51 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 flex flex-col font-sans selection:bg-[#5faedb] selection:text-white">
-      {/* 1. Ultra-Clean Header Navigation */}
-      <Navbar onOpenQuoteModal={handleOpenQuoteModal} />
+      
+      {/* 1. TOP FULL-SCREEN WRAPPER : L'IMAGE COMMENCE DU TOUT HAUT DU SITE (MENU + HERO) */}
+      <div className="relative bg-slate-950 text-white overflow-hidden min-h-[92vh] flex flex-col">
+        
+        {/* Full-bleed background image : 'agent-de-nettoyage-debout-donnant-son-dos-à-la-cam.webp' */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <picture>
+            <source srcSet="/assets/agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp" type="image/webp" />
+            <source srcSet="/assets/agent-de-nettoyage-debout-donnant-son-dos-à-la-cam.webp" type="image/webp" />
+            <source srcSet="/assets/.aistudio/agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp" type="image/webp" />
+            <img
+              src="/assets/agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp"
+              alt="Excellence Nettoyage - Agent Professionnel Île-de-France"
+              className="w-full h-full object-cover object-right md:object-center filter brightness-[0.98] contrast-[1.02]"
+              referrerPolicy="no-referrer"
+            />
+          </picture>
+
+          {/* Dégradés ultra-légers pour préserver toute la clarté et visibilité de l'image */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/65 via-slate-950/25 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-transparent to-slate-950/70"></div>
+        </div>
+
+        {/* Header & Menu au-dessus de l'image */}
+        <div className="relative z-20">
+          <Navbar onOpenQuoteModal={handleOpenQuoteModal} />
+        </div>
+
+        {/* Hero Section */}
+        <div className="relative z-10 flex-1 flex items-center">
+          <Hero onOpenQuoteModal={handleOpenQuoteModal} />
+        </div>
+
+      </div>
 
       {/* Main Content */}
       <main className="flex-1">
-        {/* 2. Light, Spacious Hero Section with Core SEO Keywords & Simulator */}
-        <Hero onOpenQuoteModal={handleOpenQuoteModal} />
-
-        {/* 3. SEO Services Pillars: Particuliers (-50%), Bureaux & Pros, Abattoirs HACCP & Extrême */}
+        {/* 2. SEO Services Pillars: Particuliers (-50%), Bureaux & Pros, Abattoirs HACCP & Extrême */}
         <ServicesOverview onOpenQuoteModal={handleOpenQuoteModal} />
 
-        {/* 4. Minimalist Contact & Devis Express */}
+        {/* 3. Minimalist Contact & Devis Express */}
         <ContactSection />
       </main>
 
-      {/* 5. Clean SEO-linked Footer */}
+      {/* 4. Clean SEO-linked Footer */}
       <Footer 
         onOpenQuoteModal={handleOpenQuoteModal} 
         onOpenLegalModal={(type) => setLegalModalType(type)}

@@ -37,12 +37,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
               onClick={() => scrollToSection('accueil')}
               className="flex items-center gap-2.5 text-left group cursor-pointer"
             >
-              <div className="w-9 h-9 rounded-xl bg-[#5faedb] group-hover:bg-slate-950 flex items-center justify-center text-white transition-colors shadow-xs">
-                <Sparkles className="w-4.5 h-4.5 text-amber-300" />
-              </div>
-              <div className="text-base font-black tracking-tight text-slate-950 font-display">
-                EXCELLENCE NETTOYAGE
-              </div>
+              <img 
+                src="/assets/excellence-nettoyage-logo-transparent.webp" 
+                alt="Excellence Nettoyage" 
+                className="h-10 sm:h-11 w-auto max-w-[200px] object-contain"
+                referrerPolicy="no-referrer"
+              />
             </button>
 
             <p className="text-xs text-slate-600 leading-relaxed max-w-sm font-medium">
@@ -59,6 +59,21 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
               </a>
 
               <a 
+                href="https://wa.me/33640860213?text=Bonjour,%20je%20souhaite%20un%20devis" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-slate-800 hover:text-emerald-700 transition-colors group"
+              >
+                <img 
+                  src="/assets/whatsapp-logo.webp" 
+                  alt="WhatsApp" 
+                  className="w-4 h-4 object-contain shrink-0 group-hover:scale-110 transition-transform" 
+                  referrerPolicy="no-referrer"
+                />
+                <span className="font-bold">WhatsApp Direct : +33 6 40 86 02 13</span>
+              </a>
+
+              <a 
                 href="mailto:contact@nettoyage-excellence.com" 
                 className="flex items-center gap-2 text-slate-800 hover:text-[#196693] transition-colors"
               >
@@ -72,6 +87,78 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
                   <span>4 Rue des Ifs, 78200 Magnanville</span>
                   <div className="text-[11px] text-slate-500 font-normal mt-0.5">Intervention 7j/7 dans toute l'Île-de-France</div>
                 </div>
+              </div>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="pt-2">
+              <div className="text-[11px] font-black uppercase tracking-wider text-slate-900 mb-2.5">
+                Suivez-nous sur les réseaux
+              </div>
+              <div className="flex items-center gap-3">
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/excellence.nettoyage?igsh=MWFuMWdnODVhZDF5YQ=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Suivez Excellence Nettoyage sur Instagram"
+                  className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center justify-center p-1.5 transition-all hover:scale-110 active:scale-95 shadow-xs"
+                >
+                  <img
+                    src="/assets/instagram-logo.webp"
+                    alt="Instagram Excellence Nettoyage"
+                    className="w-full h-full object-contain"
+                    referrerPolicy="no-referrer"
+                  />
+                </a>
+
+                {/* TikTok */}
+                <a
+                  href="https://www.tiktok.com/@excellence.nettoy3?_r=1&_t=ZN-98w8u62eu4U"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Suivez Excellence Nettoyage sur TikTok"
+                  className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center justify-center p-1.5 transition-all hover:scale-110 active:scale-95 shadow-xs"
+                >
+                  <img
+                    src="/assets/tiktok-logo.webp"
+                    alt="TikTok Excellence Nettoyage"
+                    className="w-full h-full object-contain"
+                    referrerPolicy="no-referrer"
+                  />
+                </a>
+
+                {/* Facebook */}
+                <a
+                  href="https://www.facebook.com/share/1EgoZrtbqe/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Suivez Excellence Nettoyage sur Facebook"
+                  className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center justify-center p-1.5 transition-all hover:scale-110 active:scale-95 shadow-xs"
+                >
+                  <img
+                    src="/assets/facebook-logo.webp"
+                    alt="Facebook Excellence Nettoyage"
+                    className="w-full h-full object-contain"
+                    referrerPolicy="no-referrer"
+                  />
+                </a>
+
+                {/* WhatsApp */}
+                <a
+                  href="https://wa.me/33640860213?text=Bonjour,%20je%20souhaite%20un%20devis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Discutez sur WhatsApp"
+                  className="w-9 h-9 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 flex items-center justify-center p-1.5 transition-all hover:scale-110 active:scale-95 shadow-xs"
+                >
+                  <img
+                    src="/assets/whatsapp-logo.webp"
+                    alt="WhatsApp Excellence Nettoyage"
+                    className="w-full h-full object-contain"
+                    referrerPolicy="no-referrer"
+                  />
+                </a>
               </div>
             </div>
           </div>
