@@ -5,11 +5,10 @@ import {
   MapPin, 
   Clock, 
   Send, 
-  CheckCircle2, 
-  ShieldCheck, 
-  MessageCircle 
+  CheckCircle2,
+  ShieldCheck,
+  MessageCircle
 } from 'lucide-react';
-import whatsappLogo from '../assets/whatsapp-logo.webp';
 
 export const ContactSection: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -140,7 +139,7 @@ export const ContactSection: React.FC = () => {
                 >
                   <div className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-100 group-hover:bg-[#25D366]/20 transition-colors flex items-center justify-center">
                     <img 
-                      src={whatsappLogo} 
+                      src="/assets/whatsapp-logo.webp" 
                       alt="WhatsApp" 
                       className="w-6 h-6 object-contain" 
                       referrerPolicy="no-referrer"

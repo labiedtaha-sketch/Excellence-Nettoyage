@@ -12,7 +12,6 @@ import {
   Zap
 } from 'lucide-react';
 import { ServiceCategory } from '../types';
-import whatsappLogo from '../assets/whatsapp-logo.webp';
 
 interface HeroProps {
   onOpenQuoteModal: (category?: ServiceCategory, serviceId?: string) => void;
@@ -73,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
                   className="h-14 sm:h-16 w-full bg-[#25D366] hover:bg-[#20ba59] text-white font-black text-xs sm:text-sm px-4 rounded-2xl transition-all flex items-center justify-center gap-2 shadow-xl hover:shadow-emerald-500/30 active:scale-95 cursor-pointer whitespace-nowrap"
                 >
                   <img 
-                    src={whatsappLogo} 
+                    src="/assets/whatsapp-logo.webp" 
                     alt="WhatsApp" 
                     className="w-5 h-5 object-contain shrink-0" 
                     referrerPolicy="no-referrer"

@@ -8,7 +8,6 @@ import { QuoteSimulatorModal } from './components/QuoteSimulatorModal';
 import { LegalModals } from './components/LegalModals';
 import { FloatingActions } from './components/FloatingActions';
 import { ServiceCategory } from './types';
-import heroBgImage from './assets/agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp';
 
 export default function App() {
   // Quote Simulator Modal State
@@ -38,14 +37,19 @@ export default function App() {
       {/* 1. TOP FULL-SCREEN WRAPPER : L'IMAGE COMMENCE DU TOUT HAUT DU SITE (MENU + HERO) */}
       <div className="relative bg-slate-950 text-white overflow-hidden min-h-[92vh] flex flex-col">
         
-        {/* Full-bleed background image : 'agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp' */}
+        {/* Full-bleed background image : 'agent-de-nettoyage-debout-donnant-son-dos-à-la-cam.webp' */}
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <img
-            src={heroBgImage}
-            alt="Excellence Nettoyage - Agent Professionnel Île-de-France"
-            className="w-full h-full object-cover object-right md:object-center filter brightness-[0.98] contrast-[1.02]"
-            referrerPolicy="no-referrer"
-          />
+          <picture>
+            <source srcSet="/assets/agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp" type="image/webp" />
+            <source srcSet="/assets/agent-de-nettoyage-debout-donnant-son-dos-à-la-cam.webp" type="image/webp" />
+            <source srcSet="/assets/.aistudio/agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp" type="image/webp" />
+            <img
+              src="/assets/agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp"
+              alt="Excellence Nettoyage - Agent Professionnel Île-de-France"
+              className="w-full h-full object-cover object-right md:object-center filter brightness-[0.98] contrast-[1.02]"
+              referrerPolicy="no-referrer"
+            />
+          </picture>
 
           {/* Dégradés ultra-légers pour préserver toute la clarté et visibilité de l'image */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/65 via-slate-950/25 to-transparent"></div>
