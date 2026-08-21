@@ -5,11 +5,11 @@ import {
   Percent, 
   FileText, 
   Phone, 
-  MessageCircle,
   ShieldCheck,
   Send,
   Mail
 } from 'lucide-react';
+import { WhatsAppIcon } from './SocialIcons';
 import confetti from 'canvas-confetti';
 import { ServiceCategory } from '../types';
 import { servicesData } from '../data/servicesData';
@@ -208,12 +208,7 @@ export const QuoteSimulatorModal: React.FC<QuoteSimulatorModalProps> = ({
                   rel="noopener noreferrer"
                   className="w-full bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold text-xs sm:text-sm py-3.5 px-6 rounded-2xl transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
                 >
-                  <img 
-                    src="/assets/whatsapp-logo.webp" 
-                    alt="WhatsApp" 
-                    className="w-4 h-4 object-contain" 
-                    referrerPolicy="no-referrer"
-                  />
+                  <WhatsAppIcon className="w-4 h-4 text-white" />
                   <span>Suivre ma demande sur WhatsApp (Optionnel)</span>
                 </a>
 

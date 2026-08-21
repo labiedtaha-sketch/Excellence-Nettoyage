@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ServicesOverview } from './components/ServicesOverview';
+import { AboutSection } from './components/AboutSection';
+import { FAQSection } from './components/FAQSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { QuoteSimulatorModal } from './components/QuoteSimulatorModal';
 import { LegalModals } from './components/LegalModals';
 import { FloatingActions } from './components/FloatingActions';
 import { ServiceCategory } from './types';
+import heroBgImage from './assets/agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp';
 
 export default function App() {
   // Quote Simulator Modal State
@@ -37,23 +40,18 @@ export default function App() {
       {/* 1. TOP FULL-SCREEN WRAPPER : L'IMAGE COMMENCE DU TOUT HAUT DU SITE (MENU + HERO) */}
       <div className="relative bg-slate-950 text-white overflow-hidden min-h-[92vh] flex flex-col">
         
-        {/* Full-bleed background image : 'agent-de-nettoyage-debout-donnant-son-dos-à-la-cam.webp' */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <picture>
-            <source srcSet="/assets/agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp" type="image/webp" />
-            <source srcSet="/assets/agent-de-nettoyage-debout-donnant-son-dos-à-la-cam.webp" type="image/webp" />
-            <source srcSet="/assets/.aistudio/agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp" type="image/webp" />
-            <img
-              src="/assets/agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp"
-              alt="Excellence Nettoyage - Agent Professionnel Île-de-France"
-              className="w-full h-full object-cover object-right md:object-center filter brightness-[0.98] contrast-[1.02]"
-              referrerPolicy="no-referrer"
-            />
-          </picture>
+        {/* Full-bleed background image : agent-de-nettoyage-debout-donnant-son-dos-a-la-cam.webp */}
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          <img
+            src={heroBgImage}
+            alt="Excellence Nettoyage - Agent Professionnel Île-de-France"
+            className="w-full h-full object-cover object-[center_25%] filter brightness-[0.92] contrast-[1.05]"
+            referrerPolicy="no-referrer"
+          />
 
-          {/* Dégradés ultra-légers pour préserver toute la clarté et visibilité de l'image */}
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/65 via-slate-950/25 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-transparent to-slate-950/70"></div>
+          {/* Dégradé subtil pour garantir une lisibilité optimale des textes tout en magnifiant l'image */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/45 to-slate-950/25"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-transparent to-slate-950/85"></div>
         </div>
 
         {/* Header & Menu au-dessus de l'image */}
@@ -73,11 +71,17 @@ export default function App() {
         {/* 2. SEO Services Pillars: Particuliers (-50%), Bureaux & Pros, Abattoirs HACCP & Extrême */}
         <ServicesOverview onOpenQuoteModal={handleOpenQuoteModal} />
 
-        {/* 3. Minimalist Contact & Devis Express */}
+        {/* 3. À Propos : Valeurs, Équipes & Matériel de pointe */}
+        <AboutSection />
+
+        {/* 4. Foire Aux Questions (FAQ) & Crédit d'Impôt */}
+        <FAQSection />
+
+        {/* 5. Contact & Devis Express */}
         <ContactSection />
       </main>
 
-      {/* 4. Clean SEO-linked Footer */}
+      {/* 6. Clean SEO-linked Footer */}
       <Footer 
         onOpenQuoteModal={handleOpenQuoteModal} 
         onOpenLegalModal={(type) => setLegalModalType(type)}

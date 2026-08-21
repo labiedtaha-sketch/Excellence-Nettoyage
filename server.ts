@@ -148,8 +148,11 @@ async function startServer() {
   });
 
   // Static assets serving for uploaded images
+  app.use('/assets', express.static(path.join(process.cwd(), 'public/assets')));
+  app.use('/assets', express.static(path.join(process.cwd(), 'public')));
   app.use('/assets', express.static(path.join(process.cwd(), 'assets')));
   app.use(express.static(path.join(process.cwd(), 'public')));
+  app.use(express.static(path.join(process.cwd(), 'public/assets')));
 
   // ----------------------------------------------------
   // Vite Middleware / Static Files Configuration

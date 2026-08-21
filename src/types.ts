@@ -45,7 +45,7 @@ export interface ReviewItem {
 
 export interface FAQItem {
   id: string;
-  category: 'tarifs' | 'particuliers' | 'entreprises' | 'extreme' | 'haccp' | 'securite';
+  category: 'devis' | 'tarifs' | 'particuliers' | 'entreprises' | 'extreme' | 'haccp' | 'securite';
   question: string;
   answer: string;
 }

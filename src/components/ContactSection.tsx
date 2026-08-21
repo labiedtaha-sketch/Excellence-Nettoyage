@@ -6,9 +6,9 @@ import {
   Clock, 
   Send, 
   CheckCircle2,
-  ShieldCheck,
-  MessageCircle
+  ShieldCheck
 } from 'lucide-react';
+import { WhatsAppIcon } from './SocialIcons';
 
 export const ContactSection: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -137,13 +137,8 @@ export const ContactSection: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 p-4 rounded-2xl bg-white border border-slate-200/80 hover:border-[#25D366] transition-all cursor-pointer group shadow-xs hover:shadow-md"
                 >
-                  <div className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-100 group-hover:bg-[#25D366]/20 transition-colors flex items-center justify-center">
-                    <img 
-                      src="/assets/whatsapp-logo.webp" 
-                      alt="WhatsApp" 
-                      className="w-6 h-6 object-contain" 
-                      referrerPolicy="no-referrer"
-                    />
+                  <div className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-100 group-hover:bg-[#25D366]/20 transition-colors flex items-center justify-center text-[#25D366]">
+                    <WhatsAppIcon className="w-6 h-6" />
                   </div>
                   <div>
                     <div className="text-xs text-slate-500 font-bold uppercase tracking-wider">WhatsApp 7j/7</div>

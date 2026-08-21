@@ -13,6 +13,7 @@ import {
   Phone
 } from 'lucide-react';
 import { ServiceCategory } from '../types';
+import { WhatsAppIcon } from './SocialIcons';
 
 interface ServicesOverviewProps {
   onOpenQuoteModal: (category?: ServiceCategory, serviceId?: string) => void;
@@ -59,7 +60,7 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({ onOpenQuoteM
         title: 'Ménage & Repassage Régulier',
         desc: 'Intervention récurrente hebdomadaire ou bimensuelle par une intervenante qualifiée dédiée.',
         points: ['Sols, poussières & finitions', 'Cuisine & sanitaires complets', 'Repassage & soin du linge'],
-        price: 'À partir de 13,50 €/h après crédit d\'impôt',
+        price: 'Sur devis personnalisé',
         tag: 'Avance Immédiate -50%'
       },
       {
@@ -67,7 +68,7 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({ onOpenQuoteM
         title: 'Fin de Bail & État des Lieux',
         desc: 'Remise à neuf intégrale du logement pour garantir la restitution intégrale de votre caution.',
         points: ['Dégraissage cuisine & électroménager', 'Détartrage salles d\'eau & robinetterie', 'Lessivage plinthes, portes & vitres'],
-        price: 'Forfait sur-mesure au m²',
+        price: 'Sur devis gratuit sous 2h',
         tag: 'Garantie Caution'
       },
       {
@@ -75,7 +76,7 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({ onOpenQuoteM
         title: 'Après Travaux & Rénovation',
         desc: 'Élimination des poussières fines, résidus de plâtre, peintures, colles et fin de chantier.',
         points: ['Aspiration industrielle HEPA', 'Décapage & grattage des sols', 'Lessivage murs & dépoussiérage'],
-        price: 'Devis express sous 2h',
+        price: 'Sur devis express sous 2h',
         tag: 'Clé en main'
       },
       {
@@ -83,7 +84,7 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({ onOpenQuoteM
         title: 'Lavage de Vitres & Baies',
         desc: 'Entretien intérieur et extérieur sans traces de toutes surfaces vitrées, baies et vérandas.',
         points: ['Vitres, baies vitrées & velux', 'Nettoyage encadrements & rails', 'Matériel professionnel anti-traces'],
-        price: 'Eligible -50% d\'impôt',
+        price: 'Sur devis personnalisé',
         tag: 'Résultat Impeccable'
       },
     ],
@@ -306,12 +307,7 @@ export const ServicesOverview: React.FC<ServicesOverviewProps> = ({ onOpenQuoteM
               rel="noopener noreferrer"
               className="bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-extrabold px-5 py-3 rounded-xl transition-all shadow-sm flex items-center gap-2"
             >
-              <img 
-                src="/assets/whatsapp-logo.webp" 
-                alt="WhatsApp" 
-                className="w-4 h-4 object-contain shrink-0" 
-                referrerPolicy="no-referrer"
-              />
+              <WhatsAppIcon className="w-4 h-4 text-white shrink-0" />
               <span>WhatsApp 7j/7</span>
             </a>
             <a

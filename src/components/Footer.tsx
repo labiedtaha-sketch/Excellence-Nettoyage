@@ -4,9 +4,11 @@ import {
   Phone, 
   Mail, 
   MapPin, 
-  CheckCircle2,
+  CheckCircle2, 
   FileText
 } from 'lucide-react';
+import { BrandLogo } from './BrandLogo';
+import { WhatsAppIcon, InstagramIcon, FacebookIcon, TikTokIcon } from './SocialIcons';
 import { ServiceCategory } from '../types';
 
 interface FooterProps {
@@ -35,14 +37,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
           <div className="lg:col-span-4 space-y-4">
             <button 
               onClick={() => scrollToSection('accueil')}
-              className="flex items-center gap-2.5 text-left group cursor-pointer"
+              className="flex items-center text-left group cursor-pointer"
             >
-              <img 
-                src="/assets/excellence-nettoyage-logo-transparent.webp" 
-                alt="Excellence Nettoyage" 
-                className="h-10 sm:h-11 w-auto max-w-[200px] object-contain"
-                referrerPolicy="no-referrer"
-              />
+              <BrandLogo variant="dark" size="sm" />
             </button>
 
             <p className="text-xs text-slate-600 leading-relaxed max-w-sm font-medium">
@@ -64,12 +61,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-slate-800 hover:text-emerald-700 transition-colors group"
               >
-                <img 
-                  src="/assets/whatsapp-logo.webp" 
-                  alt="WhatsApp" 
-                  className="w-4 h-4 object-contain shrink-0 group-hover:scale-110 transition-transform" 
-                  referrerPolicy="no-referrer"
-                />
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366] shrink-0 group-hover:scale-110 transition-transform" />
                 <span className="font-bold">WhatsApp Direct : +33 6 40 86 02 13</span>
               </a>
 
@@ -102,14 +94,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Suivez Excellence Nettoyage sur Instagram"
-                  className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center justify-center p-1.5 transition-all hover:scale-110 active:scale-95 shadow-xs"
+                  className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 text-pink-600 border border-slate-200 flex items-center justify-center p-2 transition-all hover:scale-110 active:scale-95 shadow-xs"
                 >
-                  <img
-                    src="/assets/instagram-logo.webp"
-                    alt="Instagram Excellence Nettoyage"
-                    className="w-full h-full object-contain"
-                    referrerPolicy="no-referrer"
-                  />
+                  <InstagramIcon className="w-full h-full" />
                 </a>
 
                 {/* TikTok */}
@@ -118,14 +105,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Suivez Excellence Nettoyage sur TikTok"
-                  className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center justify-center p-1.5 transition-all hover:scale-110 active:scale-95 shadow-xs"
+                  className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-200 flex items-center justify-center p-2 transition-all hover:scale-110 active:scale-95 shadow-xs"
                 >
-                  <img
-                    src="/assets/tiktok-logo.webp"
-                    alt="TikTok Excellence Nettoyage"
-                    className="w-full h-full object-contain"
-                    referrerPolicy="no-referrer"
-                  />
+                  <TikTokIcon className="w-full h-full" />
                 </a>
 
                 {/* Facebook */}
@@ -134,14 +116,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Suivez Excellence Nettoyage sur Facebook"
-                  className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center justify-center p-1.5 transition-all hover:scale-110 active:scale-95 shadow-xs"
+                  className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 text-blue-600 border border-slate-200 flex items-center justify-center p-2 transition-all hover:scale-110 active:scale-95 shadow-xs"
                 >
-                  <img
-                    src="/assets/facebook-logo.webp"
-                    alt="Facebook Excellence Nettoyage"
-                    className="w-full h-full object-contain"
-                    referrerPolicy="no-referrer"
-                  />
+                  <FacebookIcon className="w-full h-full" />
                 </a>
 
                 {/* WhatsApp */}
@@ -150,14 +127,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenQuoteModal, onOpenLegalMod
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Discutez sur WhatsApp"
-                  className="w-9 h-9 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 flex items-center justify-center p-1.5 transition-all hover:scale-110 active:scale-95 shadow-xs"
+                  className="w-9 h-9 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-[#25D366] border border-emerald-200 flex items-center justify-center p-2 transition-all hover:scale-110 active:scale-95 shadow-xs"
                 >
-                  <img
-                    src="/assets/whatsapp-logo.webp"
-                    alt="WhatsApp Excellence Nettoyage"
-                    className="w-full h-full object-contain"
-                    referrerPolicy="no-referrer"
-                  />
+                  <WhatsAppIcon className="w-full h-full" />
                 </a>
               </div>
             </div>

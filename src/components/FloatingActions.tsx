@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, MessageCircle, ArrowUp } from 'lucide-react';
+import { Phone, ArrowUp } from 'lucide-react';
+import { WhatsAppIcon } from './SocialIcons';
 
 export const FloatingActions: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -38,12 +39,7 @@ export const FloatingActions: React.FC = () => {
         aria-label="Discuter sur WhatsApp"
       >
         <div className="relative flex items-center justify-center">
-          <img 
-            src="/assets/whatsapp-logo.webp" 
-            alt="WhatsApp" 
-            className="w-6 h-6 object-contain"
-            referrerPolicy="no-referrer"
-          />
+          <WhatsAppIcon className="w-6 h-6 text-white" />
           <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-white rounded-full animate-ping"></span>
           <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-100 rounded-full"></span>
         </div>

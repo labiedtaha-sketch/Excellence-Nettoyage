@@ -74,9 +74,9 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
           {/* Price & Summary Box */}
           <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <div className="text-xs font-bold uppercase tracking-wider text-slate-500">Tarif indicatif</div>
-              <div className="text-2xl font-extrabold text-blue-900 font-display">
-                {service.startingPrice}
+              <div className="text-xs font-bold uppercase tracking-wider text-slate-500">Modalité d'intervention</div>
+              <div className="text-xl sm:text-2xl font-extrabold text-slate-950 font-display">
+                {service.startingPrice || 'Sur devis personnalisé'}
               </div>
               {service.priceNote && (
                 <div className="text-xs text-slate-600 font-medium">{service.priceNote}</div>
@@ -84,7 +84,7 @@ export const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
             </div>
 
             <div className="flex items-center gap-2 text-xs text-slate-600 bg-white p-3 rounded-xl border border-slate-200">
-              <Clock className="w-4 h-4 text-blue-600 shrink-0" />
+              <Clock className="w-4 h-4 text-[#155a82] shrink-0" />
               <div>
                 <div className="font-bold text-slate-900">Durée & Fréquence</div>
                 <div>{service.durationEstimate}</div>

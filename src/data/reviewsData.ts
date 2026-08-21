@@ -78,9 +78,9 @@ export const reviewsData: ReviewItem[] = [
 export const faqData: FAQItem[] = [
   {
     id: 'faq-1',
-    category: 'tarifs',
+    category: 'devis',
     question: 'Comment fonctionne le crédit d’impôt de 50% avec l’Avance Immédiate de l’Urssaf ?',
-    answer: 'En tant qu’entreprise agréée Services à la Personne (SAP), vous bénéficiez d’un crédit d’impôt de 50% sur toutes nos prestations à domicile (ménage régulier, grand nettoyage, repassage, vitres). Grâce au dispositif "Avance Immédiate" de l’Urssaf, vous ne payez que 50% du montant de la facture : la déduction de 50% est appliquée directement et instantanément lors du règlement de votre devis. Aucune avance de trésorerie n’est nécessaire.'
+    answer: 'En tant qu’entreprise agréée Services à la Personne (SAP), vous bénéficiez d’un crédit d’impôt de 50% sur toutes nos prestations à domicile éligibles (ménage régulier, grand nettoyage, repassage, vitres). Grâce au dispositif officiel "Avance Immédiate" de l’Urssaf, vous ne payez que 50% du montant de votre devis : la déduction de 50% est appliquée directement et instantanément lors du règlement. Aucune avance de trésorerie n’est nécessaire.'
   },
   {
     id: 'faq-2',
@@ -109,19 +109,19 @@ export const faqData: FAQItem[] = [
   {
     id: 'faq-6',
     category: 'entreprises',
-    question: 'Quels sont vos délais pour intervenir et établir un devis professionnel ?',
-    answer: 'Pour les entreprises et copropriétés, nous réalisons une visite technique gratuite sur site sous 24h et remettons une proposition commerciale détaillée sous 48h. Pour les urgences (sinistres, dégâts des eaux, contrôles sanitaires inopinés), notre astreinte mobile d’intervention rapide est mobilisable en moins de 2 heures en Île-de-France.'
+    question: 'Quels sont vos délais pour intervenir et établir un devis personnalisé ?',
+    answer: 'Pour les particuliers, les entreprises et les copropriétés, nous établissons un devis personnalisé sous 2 heures. Pour les besoins complexes sur site, nous réalisons une visite technique gratuite sous 24h. Pour les urgences (sinistres, dégâts des eaux, contrôles sanitaires inopinés), notre astreinte mobile d’intervention rapide est mobilisable en moins de 2 heures en Île-de-France.'
   },
   {
     id: 'faq-7',
     category: 'securite',
     question: 'Êtes-vous couverts par une assurance Responsabilité Civile Professionnelle ?',
-    answer: 'Absolument. Excellence Nettoyage est titulaire d’un contrat d’assurance Responsabilité Civile Professionnelle auprès de la compagnie AXA France à hauteur de 5 000 000 € couvrant l’ensemble des biens, locaux, matériels confiés et objets d’art.'
+    answer: 'Absolument. Excellence Nettoyage est titulaire d’un contrat d’assurance Responsabilité Civile Professionnelle auprès de la compagnie AXA France couvrant l’ensemble des biens, locaux, matériels confiés et objets de valeur.'
   },
   {
     id: 'faq-8',
-    category: 'tarifs',
+    category: 'devis',
     question: 'Que signifie votre engagement "Satisfait ou Refait sous 24h" ?',
-    answer: 'Si un détail de la prestation ne correspond pas exactement à vos attentes ou au cahier des charges convenu, il vous suffit de nous le signaler sous 24h (avec photos si souhaité). Nous programmons immédiatement le retour d’un technicien pour corriger le point sans aucun frais supplémentaire.'
+    answer: 'Si un détail de la prestation ne correspond pas exactement à vos attentes ou au devis convenu, il vous suffit de nous le signaler sous 24h. Nous programmons immédiatement le retour d’un technicien pour corriger le point sans aucun frais supplémentaire.'
   }
 ];
